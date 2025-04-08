@@ -2,6 +2,11 @@ import streamlit as st
 import pandas as pd
 import torch
 from sentence_transformers import SentenceTransformer, util
+from huggingface_hub import login
+import os
+
+# token
+login(token=os.environ.get("HF_TOKEN"))
 
 # -- Page config
 st.set_page_config(page_title="LLM-Powered HR Filter", layout="wide")
