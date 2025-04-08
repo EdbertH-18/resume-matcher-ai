@@ -6,7 +6,12 @@ from huggingface_hub import login
 import os
 
 # token
-login(token=os.environ.get("HF_TOKEN"))
+hf_token = os.environ.get("HF_TOKEN")
+try:
+    login(token=hf_token)
+except ValueError:
+    st.error("Invalid Hugging Face token. Please check your `HF_TOKEN` in secrets.")
+    st.stop()
 
 # -- Page config
 st.set_page_config(page_title="LLM-Powered HR Filter", layout="wide")
