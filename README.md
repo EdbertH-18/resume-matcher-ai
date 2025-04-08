@@ -29,14 +29,11 @@ Instead of keyword search, it understands meaning — "data science" and "machin
 ---
 
 ## 📝 Test Scenarios
-| Job Description | Expected Match |
-|-----------------|----------------|
-| C++ + Java backend dev | Cindy Hamilton |
-| Deep learning + AI research | James Pruitt, Rachel Johnson |
-| NLP with Python | Margaret Martin |
-| Cybersecurity | Elizabeth Smith |
-| SQL + dashboards | Desiree White or others with SQL/React |
-
+- We're seeking a backend engineer with solid experience in Java and C++ for real-time systems.
+- Looking for a machine learning researcher with a strong background in deep learning and neural network architecture design.
+- We need a data scientist with Python expertise and a focus on natural language processing and conversational AI.
+- Hiring a security analyst familiar with ethical hacking, network protocols, and penetration testing.
+- Searching for a data analyst who can build dashboards using SQL, Power BI, and advanced data visualization tools.
 ---
 
 ## 📌 Future Ideas
