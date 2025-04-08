@@ -3,10 +3,9 @@ import pandas as pd
 import torch
 from sentence_transformers import SentenceTransformer, util
 from huggingface_hub import login
-import os
 
 # token
-hf_token = os.environ.get("HF_TOKEN")
+hf_token = st.secrets["HF_TOKEN"]
 try:
     login(token=hf_token)
 except ValueError:
