@@ -22,6 +22,10 @@ def load_data():
 
 df = load_data()
 
+# Optional Raw Data Preview
+with st.expander("📂 Preview Resume Dataset", expanded=False):
+    st.dataframe(df)
+
 # -- Load model
 @st.cache_resource
 def load_model():
@@ -66,11 +70,12 @@ if user_input:
     st.write("🔢 **Score Range for this Query:**")
     st.write(f"Max: {similarities.max():.2f} | Min: {similarities.min():.2f}")
 
+    # --- Show Top 5 Results
+    st.markdown("Top 5 Matching Resumes")
+
     for i, row in top_df.iterrows():
         label = get_match_label(row["Similarity"])
         with st.expander(f"👤 {row.get('Name', 'Candidate')} | {label} | Score: {row['Similarity']:.2f}"):
             st.markdown(f"""
             **🛠️ Skills:** {row.get('Skills', 'N/A')}  
-            **🎓 Education:** {row.get('Education', 'N/A')}  
-            **🧠 Experience:** {row.get('Experience', 'N/A')}
             """)
